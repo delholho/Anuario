@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default " role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,11 +14,26 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-            <li calss="active"><%=link_to "Inicio", root_path %></li>
-            <li><%=link_to "Sobre", sobre_path %></li>
-            <li><%=link_to "Contato", contato_path %></li>
-            <li><%=link_to "Cadastro", cadastro_path %></li>
-            <li><%=link_to "Login", login_path %></li>
+        <li calss="active"><%=link_to "Inicio", root_path %></li>
+        <li><%=link_to "Sobre", sobre_path %></li>
+        <li><%=link_to "Contato", contato_path %></li>
+        <li><%=link_to "Cadastro", cadastro_path %></li>
+        <% if logged_in? %>
+        <li><%= link_to "Usuarios", '#' %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Conta <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Perfil", current_user %></li>
+            <li><%= link_to "Configurações", '#' %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to "Sair", logout_path, method: "delete" %>
+            </li>
+          </ul>
+        </li>
+        <% else %>
+        <li><%= link_to "Login", login_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

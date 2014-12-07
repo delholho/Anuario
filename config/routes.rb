@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'users/new'
+
   resources :clientes
 
   root 'paginas#inicio'
 
   get "sobre" => "paginas#sobre", as: :sobre
   get "contato" => "paginas#contato", as: :contato
-  get "cadastro" => "clientes#new", as: :cadastro
-  get "login" => "paginas#login", as: :login
+  get "cadastro" => "users#new", as: :cadastro
 
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
