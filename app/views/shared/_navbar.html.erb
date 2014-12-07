@@ -17,7 +17,9 @@
         <li calss="active"><%=link_to "Inicio", root_path %></li>
         <li><%=link_to "Sobre", sobre_path %></li>
         <li><%=link_to "Contato", contato_path %></li>
+        <% if !logged_in? %>
         <li><%=link_to "Cadastro", cadastro_path %></li>
+        <% end %>
         <% if logged_in? %>
         <li><%= link_to "Usuarios", users_path %></li>
         <li class="dropdown">

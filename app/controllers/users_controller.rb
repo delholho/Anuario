@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-     params.require(:user).permit(:nomeCompleto, :login, :email, :password, :password_confirmation)
+     params.require(:user).permit(:nomeCompleto, :login, :email, :password, :password_confirmation, :estado, :cidade, :descricao, :foto)
   end
   def logged_in_user
     unless logged_in?
