@@ -1,21 +1,22 @@
-<% provide(:title, 'Ambiente de cadastro') %>
+<% provide(:title, "Edit user") %>
+<h1>Edite seus dados</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <h1>Ambiente de cadastro</h1></br>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
+
       <%= f.label :nomeCompleto, "Nome Completo" %>
-      <%= f.text_field :nomeCompleto, class: 'form-control'  %>
+      <%= f.text_field :nomeCompleto, class: 'form-control' %>
 
       <%= f.label :email %>
-      <%= f.text_field :email, class: 'form-control'  %>
+      <%= f.text_field :email, class: 'form-control' %>
 
       <%= f.label :password, "Senha" %>
-      <%= f.password_field :password, class: 'form-control'  %>
+      <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmação" %>
-      <%= f.password_field :password_confirmation, class: 'form-control'  %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.label :login %>
       <%= f.text_field :login, class: 'form-control' %>
@@ -32,8 +33,12 @@
       <%= f.label :descricao %>
       <%= f.text_field :descricao, class: 'form-control' %>
 
-
-      <%= f.submit "Criar sua conta", class: "btn btn-primary" %>
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
+
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target=_blank>change</a>
+    </div>
   </div>
 </div>
