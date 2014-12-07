@@ -1,19 +1,29 @@
 <% provide(:title, "Login") %>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-  	<h1>Faça seu Login</h1>
-    <%= form_for(:session, url: login_path) do |f| %>
+	<div class="col-md-6 col-md-offset-3">
+		<h1>Faça seu Login</h1>
+		<%= form_for(:session, url: login_path) do |f| %>
 
-      <%= f.label :login %>
-      <%= f.text_field :login, class: 'form-control' %>
+		<%= f.label :login %>
+		<%= f.text_field :login, class: 'form-control' %>
 
-      <%= f.label :password, "Senha" %>
-      <%= f.password_field :password, class: 'form-control' %>
+		<%= f.label :password, "Senha" %>
+		<%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.submit "Login", class: "btn btn-primary" %>
-    <% end %>
+		<%= f.label :remember_me, class: "checkbox inline" do %>
+		<%= f.check_box :remember_me %>
+		<span>Mantenha-me conectado</span>
+		<% end %>
 
-    <p>Novo Usuario? <%= link_to "Cadastre-se agora!", cadastro_path %></p>
-  </div>
+		<%= f.submit "Login", class: "btn btn-primary" %>
+		<% end %>
+
+		<p>Novo Usuario? <%= link_to "Cadastre-se agora!", cadastro_path %></p>
+
+		<hr>
+		<footer>
+        	<p>Trabalho de Tópicos Especiais em Computação - Anuário 2014/2</p>
+     	</footer>
+	</div>
 </div>
