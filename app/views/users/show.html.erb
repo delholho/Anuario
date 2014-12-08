@@ -22,41 +22,7 @@
 	<div class="col-md-3">
 	</div>
 </div>	</br>
-<div class="row">
-	  <div class="col-md-4">
-      <ul class="users">
-      <%= for i in (0..5) do %>
-      <li>
-        <%= ind = Random.rand(User.all.size); %>
-        <%= gravatar_for User.all[ind], size: 50 %>
-        <%= link_to User.all[ind].nomeCompleto, User.all[ind] %>
-      </li>
-      <% end %>
-  </ul>
-  </div>
-  <div class="col-md-4">
-  <ul class="users">
-      <%= for i in (0..5) do %>
-      <li>
-        <%= ind = Random.rand(User.all.size); %>
-        <%= gravatar_for User.all[ind], size: 50 %>
-        <%= link_to User.all[ind].nomeCompleto, User.all[ind] %>
-      </li>
-      <% end %>
-  </ul>
-  </div>
-    <div class="col-md-4">
-  <ul class="users">
-      <%= for i in (0..5) do %>
-      <li>
-        <%= ind = Random.rand(User.all.size); %>
-        <%= gravatar_for User.all[ind], size: 50 %>
-        <%= link_to User.all[ind].nomeCompleto, User.all[ind] %>
-      </li>
-      <% end %>
-  </ul>
-  </div>
-</div>
+
 
 <% else %>
   	<div class="col-md-4"></div>
