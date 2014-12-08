@@ -5,7 +5,7 @@ User.create!(nomeCompleto:  "Example User",
              login:                 "example",
              cidade:                "foocity",
              estado:                "fooState",
-             descricao:             "no discrition" 
+             descricao:             "no discrition", 
              admin: true)
 
 99.times do |n|

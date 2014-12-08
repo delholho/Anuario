@@ -4,22 +4,22 @@
   <div class="col-md-6 col-md-offset-3">
     <h1>Edite seus dados</h1>
     <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+    <%= render 'shared/error_messages' %>
 
-      <%= f.label :nomeCompleto, "Nome Completo" %>
-      <%= f.text_field :nomeCompleto, class: 'form-control' %>
+    <%= f.label :nomeCompleto, "Nome Completo" %>
+    <%= f.text_field :nomeCompleto, class: 'form-control' %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email, class: 'form-control' %>
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
 
-      <%= f.label :password, "Senha" %>
-      <%= f.password_field :password, class: 'form-control' %>
+    <%= f.label :password, "Senha" %>
+    <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmação" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+    <%= f.label :password_confirmation, "Confirmação" %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.label :login %>
-      <%= f.text_field :login, class: 'form-control' %>
+    <%= f.label :login %>
+    <%= f.text_field :login, class: 'form-control' %>
 
       <!--<%= f.label :foto %>
       <%= f.file_field :foto, class: 'form-control' %>-->
@@ -34,16 +34,18 @@
       <%= f.text_field :descricao, class: 'form-control' %>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
-    <% end %>
+      <% end %>
 
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target=_blank>change</a>
+      <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="http://gravatar.com/emails" target=_blank>change</a>
+      </div>
+
     </div>
   </div>
-</div>
-<hr>
 
-<footer>
-  <p>Trabalho de Tópicos Especiais em Computação - Anuário 2014/2</p>
-</footer>
+  <hr>
+
+  <footer>
+    <p>Trabalho de Tópicos Especiais em Computação - Anuário 2014/2</p>
+  </footer>

@@ -10,7 +10,7 @@
 	  <%= link_to user.nomeCompleto, user %>
 	  <% if current_user.admin? && !current_user?(user) %>
 	    | <%= link_to "Apagar", user, method: :delete,
-	                                  data: { confirm: "Você esta certo disso?" } %>
+	    data: { confirm: "Você esta certo disso?" } %>
 	  <% end %>
 	</li>
   <% end %>
