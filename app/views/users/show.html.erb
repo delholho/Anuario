@@ -12,7 +12,13 @@
       <p> Cidade: <%= @user.cidade %></p>
       <p> Estado: <%= @user.estado %></p>
       <p> Descrição: <%= @user.descricao %></p>
-      <%= image_tag(@user.foto)%>
     </section>
-  </div>
+  </div> 
+</div></br>
+ <div class="col-md-5"></div>
+<div class="col-md-3">
+	<% if !current_user.admin? && current_user?(@user) %>
+	<%= link_to "Apagar perfil", @user, method: :delete,
+	  data: { confirm: "Você esta certo disso?" }, class: "btn btn-primary" %>
+	<% end %>  
 </div>

@@ -37,13 +37,4 @@ end"""
   update_attribute(:remember_digest, nil)
 end"""
 
-  # cria o caminho físico do arquivo
-  path = File.join(Rails.root, 
-  	"public/images", 
-  	params[:user][:avatar].original_filename)
-
-# escreve o arquivo no local designado
-File.open(path, "wb") do |f| 
-	f.write(params[:user][:avatar].read)
-	endr
 end
