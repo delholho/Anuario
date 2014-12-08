@@ -1,11 +1,11 @@
-User.create!(nomeCompleto:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             login:                 "example",
-             cidade:                "foocity",
-             estado:                "fooState",
-             descricao:             "no discrition", 
+User.create!(nomeCompleto:  "Delio",
+             email: "a12011@bcc.unifal-mg.edu.br",
+             password:              "mudar123",
+             password_confirmation: "mudar123",
+             login:                 "delio",
+             cidade:                "alfenas",
+             estado:                "minas",
+             descricao:             "heroku", 
              admin: true)
 
 99.times do |n|
