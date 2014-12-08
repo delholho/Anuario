@@ -6,20 +6,24 @@
   </div>
 </div>
 
-<div class="container">
-  <!-- Example row of columns -->
-  <div class="row">
-   <div class="col-md-4"></div>
-   <div class="col-md-4">
-    <h2>Pagina principal</h2>
-    <p>A página principal do sistema deve conter uma breve apresentação do site e mostrar algumas fotos em formato thumbnail e nomes de pessoas participantes. Essas fotos devem conter os links para os perfis dessas pessoas, mas para acessá-los é necessário estar logado no sistema.</p>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-5">
+  <ul class="users">
+      <%= for i in (0..5) do %>
+      <li>
+        <%= ind = Random.rand(User.all.size); %>
+        <%= gravatar_for User.all[ind], size: 50 %>
+        <%= link_to User.all[ind].nomeCompleto, User.all[ind] %>
+      </li>
+      <% end %>
+  </ul>
   </div>
 </div>
-
 
 <hr>
 
 <footer>
   <p>Trabalho de Tópicos Especiais em Computação - Anuário 2014/2</p>
 </footer>
-    </div> <!-- /container -->
+</div> <!-- /container -->
